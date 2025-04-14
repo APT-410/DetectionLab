@@ -138,3 +138,7 @@ SecurityLabSetup.log
 # Secrets / Credentials (add any specific patterns if needed)
 *.pem
 *.key 
+
+#copilot
+.github
+.vscode
