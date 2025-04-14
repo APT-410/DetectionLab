@@ -1,0 +1,16 @@
+// Example KQL Detection Rule for Sentinel
+// Detects potential brute force attack based on ASA output
+
+let threshold = 10; // Define the threshold for failed logins
+
+SecurityStream_CL // Use the custom table name defined in ASA output
+| where AlertName == 'Multiple Failed Logins Detected' // Filter for the specific alert from ASA
+| where FailedCount >= threshold
+| project
+    AlertTime,
+    AlertName,
+    SourceIpAddress,
+    FailedCount,
+    Description = strcat('Multiple failed logins (', FailedCount, ') detected from IP address ', SourceIpAddress, ' within 5 minutes.')
+    // Add entity mapping for IP address
+// | extend IPCustomEntity = SourceIpAddress 
