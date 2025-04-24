@@ -1,6 +1,6 @@
 # Azure Security Monitoring & Analytics Lab (Event Hubs Architecture)
 
-This project deploys a scalable Azure environment designed for enterprise-grade security log ingestion, real-time processing, SIEM/SOAR capabilities, and large-scale batch analytics/ML.
+This lab deploys a scalable Azure environment designed to mimic enterprise-grade security log ingestion, real-time processing, SIEM/SOAR capabilities, and large-scale batch analytics/ML.
 
 It utilizes Azure Event Hubs as the central ingestion point for high-volume logs, alongside Azure Monitor Agent providing comprehensive security telemetry directly to Log Analytics from VMs.
 
